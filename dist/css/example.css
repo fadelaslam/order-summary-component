@@ -1,0 +1,125 @@
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--paleBlue);
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: minmax(460px, 326px); /
+}
+
+.card {
+  width: 460px;
+  display: grid;
+  gap: 40px;
+  background-color: #ffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  text-align: center;
+}
+
+.card .desc p {
+  text-align: center;
+  color: var(--desBlue);
+  font-weight: 500;
+  font-size: 1.1em;
+  padding: 0 40px;
+}
+
+.card .price {
+  margin: 0 25px;
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--veryPaleBlue);
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.card .price img {
+  width: 60px;
+}
+
+.card .price .item h4 {
+  font-weight: 900;
+  font-size: 1.1em;
+}
+
+.card .price .item p {
+  color: var(--desBlue);
+}
+
+.card .price .item a {
+  font-weight: 900;
+}
+
+.card .payment {
+  margin: 0 25px;
+  background-color: var(--brightBlue);
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.card .payment a {
+  color: var(--veryPaleBlue);
+  text-align: center;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.card .cancel {
+  margin: 35px auto;
+}
+
+.card .cancel a {
+  padding: 0 25px;
+  color: var(--desBlue);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 550px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
+
+  .container{
+      display: grid;
+      justify-content: center
+  };
+
+  .card {
+    min-width: 326px!important;
+  }
+}

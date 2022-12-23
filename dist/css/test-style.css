@@ -1,0 +1,136 @@
+:root {
+  --brightBlue: hsl(245, 75%, 52%);
+  --paleBlue: hsl(225, 100%, 94%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkblue: hsl(223, 47%, 23%);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../images/pattern-background-mobile.svg);
+  background-color: var(--paleBlue);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Default typography */
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px; // Sse EM *16px * size in EM.
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Card */
+.card {
+  width: 415px;
+  background-color: #ffff;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card .header-card img {
+  width: 100%;
+}
+
+.card .body-card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body-card .body-card-title {
+  font-weight: 900;
+  font-size: 1.2em;
+  color: var(--darkblue);
+}
+
+.body-card .body-card-description {
+  text-align: center;
+  padding: 0 30px;
+  color: var(--desaturatedBlue);
+}
+
+.body-card .body-card-pricing {
+  width: 100%;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--veryPaleBlue);
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.body-card-pricing img {
+  width: 50px;
+  height: 50px;
+}
+
+.body-card-pricing .annual-plan .annual-desc {
+  color: var(--darkblue);
+  font-weight: 800;
+}
+
+.body-card-pricing .annual-plan .annual-pricing {
+  color: var(--desaturatedBlue);
+}
+
+.body-card-pricing a {
+  color: var(--brightBlue);
+  font-weight: 800;
+}
+
+.body-card-pricing a:hover {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+.body-card .body-card-payment a {
+  padding: 10px 65px;
+  background-color: var(--brightBlue);
+  color: var(--veryPaleBlue);
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.body-card .body-card-payment a:hover {
+  background-color: #766cf1;
+}
+
+.body-card .body-card-cancel {
+  margin-top: 40px;
+}
+
+.body-card .body-card-cancel a {
+  text-decoration: none;
+  color: var(--desaturatedBlue);
+  font-weight: 700;
+}
+
+.body-card .body-card-cancel a:hover {
+  text-decoration: none;
+  color: var(--darkBlue);
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 450px) {
+  .card {
+    width: 85%;
+  }
+
+  .card .body-card {
+    padding: 20px;
+  }
+}
